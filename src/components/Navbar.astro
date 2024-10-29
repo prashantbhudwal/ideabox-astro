@@ -1,0 +1,11 @@
+---
+const pages = [
+  { title: "Home", slug: "/" },
+  { title: "About", slug: "/about/" },
+  { title: "All Posts", slug: "/blog/" },
+];
+---
+
+<header class="flex items-center space-x-2 underline">
+  {pages.map((page) => <a href={page.slug}>{page.title}</a>)}
+</header>
