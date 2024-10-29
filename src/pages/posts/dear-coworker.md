@@ -1,4 +1,14 @@
-# Dear co-worker | Help me do my best work
+---
+layout: "@/layouts/PostLayout.astro"
+title: "Dear Co-worker, Help me do my best work"
+pubDate: 2022-07-01
+description: "Helping others to understand you better."
+author: "Prashant Bhudwal"
+image:
+  url: "https://docs.astro.build/assets/rose.webp"
+  alt: "The Astro logo on a dark background with a pink glow."
+tags: ["astro", "blogging", "learning in public"]
+---
 
 Solving complex problems is hard. Complex problems require hard work in long continuous chunks. That is the only way. It is a tussle that might go on for hours, days, or months. I hate it when people don’t understand that.
 

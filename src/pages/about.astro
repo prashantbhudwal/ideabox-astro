@@ -1,16 +1,17 @@
 ---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
 const pageTitle = "About Ideabox";
 ---
 
-<main class="bg-gray-50">
-  <header>
-    <h1>{pageTitle}</h1>
-    <h2>... and my new Astro site!</h2>
-    <h1>Ideabox</h1>
-    <h2>Ideabox is a collection of my thoughts and ideas.</h2>
-  </header>
-  <footer class="bg-slate-900">
-    <p>Ideabox - copyright 2024</p>
-  </footer>
-  <div></div>
-</main>
+<BaseLayout title={pageTitle}>
+  <main class="bg-gray-50">
+    <header>
+      <h1>{pageTitle}</h1>
+      <h2>... and my new Astro site!</h2>
+      <h1>Ideabox</h1>
+      <h2>Ideabox is a collection of my thoughts and ideas.</h2>
+    </header>
+    <div></div>
+  </main>
+</BaseLayout>

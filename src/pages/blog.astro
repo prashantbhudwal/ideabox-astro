@@ -1,17 +1,19 @@
 ---
-
+import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
-<main>
-  <header>
-    <h1>All Posts</h1>
-  </header>
-  <ul>
-    <li>
-      <a href="/posts/hello-world">Hello World</a>
-    </li>
-    <li>
-      <a href="/posts/dear-coworker">Dear Coworker</a>
-    </li>
-  </ul>
-</main>
+<BaseLayout title="All blog posts | Ideabox">
+  <main>
+    <header>
+      <h1>All Posts</h1>
+    </header>
+    <ul>
+      <li>
+        <a href="/posts/hello-world">Hello World</a>
+      </li>
+      <li>
+        <a href="/posts/dear-coworker">Dear Coworker</a>
+      </li>
+    </ul>
+  </main>
+</BaseLayout>
