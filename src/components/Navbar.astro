@@ -1,4 +1,6 @@
 ---
+import { ModeToggle } from "./ModeToggle";
+
 const pages = [
   { title: "Home", slug: "/" },
   { title: "About", slug: "/about/" },
@@ -6,6 +8,34 @@ const pages = [
 ];
 ---
 
-<header class="flex items-center space-x-2 underline">
-  {pages.map((page) => <a href={page.slug}>{page.title}</a>)}
+<script is:inline>
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+  const isDark = getThemePreference() === "dark";
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+  if (typeof localStorage !== "undefined") {
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
+</script>
+<header class="flex items-center space-x-2 justify-between py-2">
+  <div class="flex items-center space-x-2 underline">
+    {pages.map((page) => <a href={page.slug}>{page.title}</a>)}
+  </div>
+  <div>
+    <ModeToggle client:load />
+  </div>
 </header>
