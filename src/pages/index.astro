@@ -1,9 +1,49 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-const helloWorld = "Hello Astro!";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 ---
 
-<BaseLayout title="Welcome to Astro.">
-  {helloWorld}
+<BaseLayout title="All blog posts | Ideabox">
+  <main class="container mx-auto px-4 py-8 max-w-2xl">
+    <div class="flex flex-col gap-6">
+      <Card className="hover:shadow-lg transition-shadow">
+        <CardHeader>
+          <div class="text-sm text-muted-foreground mb-2">
+            Jan 1, 2024 • 5 min read
+          </div>
+          <CardTitle className="mb-2">
+            <a href="/posts/hello-world" class="hover:text-primary"
+              >Hello World</a
+            >
+          </CardTitle>
+          <CardDescription>
+            An introduction to my blog and what you can expect from my future
+            posts.
+          </CardDescription>
+        </CardHeader>
+      </Card>
+
+      <Card className="hover:shadow-lg transition-shadow">
+        <CardHeader>
+          <div class="text-sm text-muted-foreground mb-2">
+            Jan 5, 2024 • 8 min read
+          </div>
+          <CardTitle className="mb-2">
+            <a href="/posts/dear-coworker" class="hover:text-primary"
+              >Dear Coworker</a
+            >
+          </CardTitle>
+          <CardDescription>
+            Thoughts on effective collaboration and communication in the
+            workplace.
+          </CardDescription>
+        </CardHeader>
+      </Card>
+    </div>
+  </main>
 </BaseLayout>
