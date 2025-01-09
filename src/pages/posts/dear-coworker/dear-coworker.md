@@ -8,7 +8,9 @@ image:
   url: "https://docs.astro.build/assets/rose.webp"
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["astro", "blogging", "learning in public"]
+randomPost: "This is a random property for testing"
 ---
+![Example Image](./_hero.png)
 
 Solving complex problems is hard. Complex problems require hard work in long continuous chunks. That is the only way. It is a tussle that might go on for hours, days, or months. I hate it when people don’t understand that.
 
