@@ -32,10 +32,11 @@ const pages = [
   }
 </script>
 <header class="flex items-center space-x-2 justify-between py-2">
-  <div class="flex items-center space-x-2 underline">
-    {pages.map((page) => <a href={page.slug}>{page.title}</a>)}
-  </div>
+  <h1 class="text-4xl font-bold">{"Ideabox"}</h1>
   <div>
     <ModeToggle client:load />
   </div>
 </header>
+<!-- <div class="flex items-center space-x-2 underline">
+    {pages.map((page) => <a href={page.slug}>{page.title}</a>)}
+  </div> -->
