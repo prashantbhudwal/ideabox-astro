@@ -1,7 +1,7 @@
 ---
 layout: "@/layouts/PostLayout.astro"
 title: "Dear Co-worker, Help me do my best work"
-pubDate: 2022-07-01
+pubDate: "2022-07-01"
 description: "Helping others to understand you better."
 author: "Prashant Bhudwal"
 image:
